@@ -1,0 +1,146 @@
+[
+    {
+        "idNumber": "22029",
+        "name": "Md Tanvirul Alam",
+        "designation": "Network Admin",
+        "department":"RVL",
+        "concern": "RVL",
+        "employeeID": "RVL22029",
+        "sickLeaves": 14,
+        "casualLeaves": 15,
+        "phone": "+8801701012696"
+      },
+      {
+        "idNumber": "22028",
+        "name": "Arpita Panday",
+        "designation": "Registration Manager",
+        "department":"RVL",
+        "concern": "RVL",
+        "employeeID": "RVL22028",
+        "sickLeaves": 14,
+        "casualLeaves": 15,
+        "phone": "+8801914740115"
+      },
+      {
+        "idNumber": "22025",
+        "name": "Rafi Ahamed",
+        "designation": "Executive, Business Development",
+        "department": "Marketing",
+        "concern": "RVL",
+        "employeeID": "RVL22025",
+        "email": "rafi.ahamed@reliefvalidation.com.bd",
+        "phone": "+8801821264580"
+      },
+      {
+    
+        "idNumber": "22035",
+        "name": "Aldrin Stephen Gomes",
+        "designation": "Datacenter Manager",
+        "department": "Information Technology",
+        "concern": "Relief Validation Limited",
+        "employeeID": "RVL22035",
+        "email": "aldrin@reliefvalidation.com.bd",
+        "phone": "+8801776013507"
+      },
+      {
+    
+        "idNumber": "22027",
+        "name": "Nowshin Rumali Tisha",
+        "designation": "Executive (Programming)",
+        "department": "",
+        "concern": "RVL",
+        "employeeID": "RVL22027",
+        "email": "nowshin.rumali@reliefvalidation.com.bd",
+        "phone": "+8801953300066"
+      },
+      {
+    
+        "idNumber": "22037",
+        "name": "Sahara khan linta",
+        "designation": "Executive SQA",
+        "department": "",
+        "concern": "RVL",
+        "employeeID": "RVL22037",
+        "email": "I don't have any.",
+        "phone": "+8801902981856"
+      },
+      {
+    
+        "idNumber": "22036",
+        "name": "Mehreen Afree Tushti",
+        "designation": "Product Development Executive",
+        "department": "RVL",
+        "concern": "RVL",
+        "employeeID": "RVL22036",
+        "email": "afree.tushti@reliefvalidation.com.bd",
+        "phone": "+8801771560280"
+      },
+      {
+    
+        "idNumber": "22023",
+        "name": "Pritam Banik",
+        "designation": "Database Administrator",
+        "department": "Technical",
+        "concern": "RVL",
+        "employeeID": "RVL22023",
+        "email": "pritam.banik@reliefvalidation.com.bd",
+        "phone": "+8801832838500"
+      },
+      {
+    
+        "idNumber": "22031",
+        "name": "Rafia Sarwar",
+        "designation": "Executive Business Development",
+        "department": "RVL",
+        "concern": "RVL",
+        "employeeID": "RVL22031",
+        "email": "rafia.sarwar68@gmail.com",
+        "phone": "+8801682921049"
+      },
+      {
+    
+        "idNumber": "22026",
+        "name": "Evana Tahrim",
+        "designation": "Jr. executive (HR& Admin)",
+        "department": "RVL",
+        "concern": "RVL",
+        "employeeID": "RVL22026",
+        "email": "evana.tahrim@reliefvalidation.com.bd",
+        "phone": "+8801781348228"
+      },
+      {
+    
+        "idNumber": "22034",
+        "name": "Adiba Moazzem",
+        "designation": "Operation Manager",
+        "department": "Operations",
+        "concern": "RVL",
+        "employeeID": "RVL22034",
+        "email": "adiba.moazzem@reliefvalidation.com.bd",
+        "phone": "+8801713335308"
+      },
+      {
+    
+        "idNumber": "22033",
+        "name": "Farzana Naznen",
+        "designation": "Sr. Operation Manager",
+        "department": "Operations",
+        "concern": "RVL",
+        "employeeID": "RVL22033",
+        "email": "naznen@reliefvalidation.com.bd",
+        "phone": "+8801713335314"
+      },
+      {
+    
+        "idNumber": "22022",
+        "name": "Tanvir Ahmed",
+        "designation": "Executive (Animation)",
+        "department": "RVL",
+        "concern": "RVL",
+        "employeeID": "RVL22022",
+        "email": "tanvir.ahmed@reliefvalidation.com.bd",
+        "phone": "+8801301582900"
+      }
+
+
+]
