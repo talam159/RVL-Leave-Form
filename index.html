@@ -2,19 +2,20 @@
 <html>
 <head>
   <title >Leave Application Form</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet"> -->
   <script src="load.js"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
   <script src="toPDF.js"></script>
   <script src="download.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body onload="formatDate()">
+<body class="bg-slate-700" onload="formatDate()">
   
   <div class="my-4">
-    <h2 class=" flex justify-center text-2xl font-bold mb-4">Leave Application Form</h2>
+    <h2 class=" text-white flex justify-center text-2xl font-bold mb-4">Leave Application Form</h2>
       <!-- parent -->
-      <form onsubmit="generatePDF(); return false;" class=" mx-auto ">
+      <form onsubmit="generatePDF(); return false;" class=" mx-36 ">
           <!-- two cards -->
         <div>
           <div class="flex items-stretch mx-10">
@@ -22,139 +23,146 @@
                   <div class="mx-10 my-4 w-full  p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
                     <div class="mb-4">
                       <div  class="mb-4">
-                        <p class="text-gray-700">Date: <span id="formatted-date" class="date"></span></p>
+                        <p class="text-white">Date: <span id="formatted-date" class="date"></span></p>
                       </div>
                           
-                          <label for="id" type="number">RVL ID</label>
-                          <input class="w-full border border-gray-300 px-3 py-2 rounded" type="text" id="idNumber" name="employeeId" >
+                          <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="id" type="number">RVL ID</label>
+                          <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" type="text" id="idNumber" placeholder="ID Number only" name="employeeId" >
                           <div class="mb-4">
 
                         </div>
                       
                         
                         <div class="mb-4">
-                          <label class="block mb-2" for="name">Name:</label>
-                          <input class="w-full border border-gray-300 px-3 py-2 rounded" type="text" id="fullName" name="name" required>
+                          <label class="block mb-2 block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="name">Name</label>
+                          <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" type="text" id="fullName" name="name" required>
                         </div>
                         
                         <div class="mb-4">
-                          <label class="block mb-2" for="designation">Designation:</label>
-                          <input class="w-full border border-gray-300 px-3 py-2 rounded" type="text" id="designation" name="designation" required>
+                          <label class="block mb-2 block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="designation">Designation</label>
+                          <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"type="text" id="designation" name="designation" required>
                         </div>
                         
                         <div class="mb-4">
-                          <label class="block mb-2" for="department">Department:</label>
-                          <input class="w-full border border-gray-300 px-3 py-2 rounded" type="text" id="department" name="department" required>
+                          <label class="block mb-2 block mb-2 text-sm font-medium text-gray-900 dark:text-white"  for="department">Department</label>
+                          <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" type="text" id="department" name="department" required>
                         </div>
                         
                         <div class="mb-4">
-                          <label class="block mb-2" for="concern">Concern:</label>
-                          <input class="w-full border border-gray-300 px-3 py-2 rounded" id="concern" name="concern" rows="4" required></input>
+                          <label class="block mb-2 block mb-2 text-sm font-medium text-gray-900 dark:text-white"  for="concern">Concern</label>
+                          <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" id="concern" name="concern" rows="4" required></input>
                         </div>
                         
-                        <div class="mb-4">
-                          <label class="block mb-2" for="employeeId">Employee ID:</label>
-                          <input class="w-full border border-gray-300 px-3 py-2 rounded" type="text" id="employeeID" name="employeeId" required>
+                        <div class="">
+                          <label class="block mb-2 block mb-2 text-sm font-medium text-gray-900 dark:text-white"  for="employeeId">Employee ID</label>
+                          <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" type="text" id="employeeID" name="employeeId" required>
                         </div>
-                        <p class="mb-4 text-xs">I agree, my leave may be cancelled at any time upon company's requirement.</p>
+                        <div class="-mt-2 flex justify-between items-center">
+                          <div>
+                            <label class="block mb-2 block text-sm font-medium text-gray-900 dark:text-white" >Leave Type</label>
+                            <input class="" type="radio" id="sickLeave" name="leaveType" value="Sick" onchange="toggleReasonMenu()" required>
+                            <label class="text-sm font-medium text-gray-900 dark:text-white"  for="sickLeave">Sick</label>
+    
+                            <input class="ml-4" type="radio" id="casualLeave" name="leaveType" value="Casual" onchange="toggleReasonMenu()" required>
+                            <label class=" text-sm font-medium text-gray-900 dark:text-white " for="casualLeave" >Casual</label>
+                          </div>
+                          <div class="my-8 mb-4 mr-14" id="reasonContainer"  >
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="reason" >Reason for Leave</label>
+                            <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" id="reason" name="reason">
+                              <option value="" disabled selected>Select a reason</option>
+                              <option value="Personal">Personal</option>
+                              <option value="Disability">Disability</option>
+                              <option value="Training">Training</option>
+                              </select>
+                          </div>
+                        </div>
+                        <p class="block mb-2 block text-sm font-medium text-gray-900 dark:text-white" >I agree, my leave may be cancelled at any time upon company's requirement.</p>
                     </div>
                   </div>
                   <div class="my-4 w-full  p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
 
                     <div class="mb-4">
-                      <label class="block mb-2">Leave Type:</label>
-                      <div>
-                        <input type="radio" id="sickLeave" name="leaveType" value="Sick" onchange="toggleReasonMenu()" required>
-                        <label for="sickLeave">Sick</label>
-
-                        <input type="radio" id="casualLeave" name="leaveType" value="Casual" onchange="toggleReasonMenu()" required>
-                        <label class="mr-4" for="casualLeave">Casual</label>
-                      </div>
+                      
+                      
+                      
+                      
                     </div>
                     
-                    <div class="mb-4" id="reasonContainer" style="display:none" >
-                      <label class="block mb-2" for="reason">Reason for Leave:</label>
-                      <select class="w-full border border-gray-300 px-3 py-2 rounded" id="reason" name="reason">
-                        <option value="" disabled selected>Select a reason</option>
-                        <option value="Personal">Personal</option>
-                        <option value="Disability">Disability</option>
-                        <option value="Training">Training</option>
-                        </select>
-                    </div>
+                    
 
                     <div class="mb-4">
-                        <label class="block mb-2" for="comments">Comments<span class="ml-2 text-xs italic">max: 70 characters.</span></label>
-                        <textarea maxlength="70" class="w-full border border-gray-300 px-3 py-2 rounded" id="comments" name="comments" rows="4"></textarea>
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="comments">Comments<span class="ml-2 text-xs italic">max: 70 characters.</span></label>
+                        <textarea maxlength="70" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" id="comments" name="comments" rows="4"></textarea>
                     </div>
 
                       
                     <div class="grid grid-cols-3 gap-4">
                         <div class=" mb-4">
-                            <label class="block mb-2 items-center" for="leaveFromDate">Leave From Date:</label>
-                            <input class="w-full border border-gray-300 px-3 py-2 rounded" type="date" id="leaveFromDate" name="leaveFromDate" required onchange="calculateTotalDays();">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="leaveFromDate">Leave From Date</label>
+                            <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" type="date" id="leaveFromDate" name="leaveFromDate" required onchange="calculateTotalDays();">
                         </div>
                           
                         <div class="mb-4">
-                            <label class="block mb-2 items-center" for="leaveToDate">Leave To Date:</label>
-                            <input class="w-full border border-gray-300 px-3 py-2 rounded date" type="date" id="leaveToDate" name="leaveToDate" required onchange="calculateTotalDays();";">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="leaveToDate">Leave To Date</label>
+                            <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" type="date" id="leaveToDate" name="leaveToDate" required onchange="calculateTotalDays();";">
                         </div>
                           
                           <div class="mb-4">
-                            <label class="block mb-2 items-center" for="totalDays">Total Days:</label>
-                            <input class="w-full border border-gray-300 px-3 py-2 rounded" type="number" id="totalDays" name="totalDays" required >
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="totalDays">Total Days</label>
+                            <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" type="number" id="totalDays" name="totalDays" required >
                           </div>
                     </div>
                         
                         
                     <div class="flex justify-between">
                         <div class="flex flex-col items-center mr-6">
-                            <h2 class="text-gray-600 ">Total Casual Leave</h2>
-                            <span id="total-casual-leave" class="text-2xl font-bold">15</span>
+                            <h2 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white ">Total Casual Leave</h2>
+                            <span id="total-casual-leave" class="text-2xl font-bold text-white">15</span>
                         </div>
                         <div class="flex flex-col items-center mr-6">
-                            <h3 class="text-gray-600">Enjoyed</h3>
-                            <input type="number" id="enjoyed-casual-leave" class="text-2xl font-bold w-16"
+                            <h3 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Enjoyed</h3>
+                            <input type="number" id="enjoyed-casual-leave" class=" font-bold text-2xl bg-gray-50 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-16 p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                             min="0" onchange="calculateRemainingLeave()" required>
                         </div>
                         <div class="flex flex-col items-center">
-                            <h3 class="text-gray-600">Remaining</h3>
-                            <span id="remaining-casual-leave" class="text-2xl font-bold"required></span>
+                            <h3 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Remaining</h3>
+                            <span id="remaining-casual-leave" class="text-2xl font-bold text-white"required></span>
                         </div>
                     </div>
 
                     <div class="flex justify-between ">
                         <div class="flex flex-col items-center mr-6">
-                            <h3 class="text-gray-600">Total Sick Leave</h3>
-                            <span id="total-sick-leave" class="text-2xl font-bold" required>14</span>
+                            <h3 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Total Sick Leave</h3>
+                            <span id="total-sick-leave" class="text-2xl font-bold text-white" required>14</span>
                         </div>
-                        <div class="flex flex-col items-center mr-6">
-                            <h3 class="text-gray-600">Enjoyed</h3>
-                            <input type="number" id="enjoyed-sick-leave" class="text-2xl font-bold w-16 " min="0" onchange="calculateRemainingSickLeave() " required>
+                        <div class=" mt-2 flex flex-col items-center ">
+                            <h3 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Enjoyed</h3>
+                            <input type="number" id="enjoyed-sick-leave" class="font-bold text-2xl bg-gray-50 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-16 p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white  " min="0" onchange="calculateRemainingSickLeave() " required>
                         </div>
                         <div class="flex flex-col items-center">
-                            <h3 class="text-gray-600">Remaining</h3>
-                            <span id="remaining-sick-leave" class="text-2xl font-bold"></span>
+                            <h3 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Remaining</h3>
+                            <span id="remaining-sick-leave" class="text-2xl font-bold text-white"></span>
                         </div>
                     </div>
-                    <div class="flex justify-between">
+                    <div class="flex justify-between mr-10 mt-4">
                       <div class="mb-4 flex flex-col items-start mr-6">
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">Address during Leave:</label>
-                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="address" type="text" placeholder="Address During Leave">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="address">Address during Leave</label>
+                        <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" id="address" type="text" placeholder="Address During Leave">
                       </div>
                       <div class="mb-4 flex flex-col items-start mr-6">
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">Phone Number:</label>
-                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="text" placeholder="Enter your phone number">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="phone">Phone Number</label>
+                        <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" id="phone" type="text" placeholder="Enter your phone number">
                       </div>
 
                     </div>
                     <div class=" mb-4">
-                      <label class="block mb-2 items-center" for="assignedPerson">Assigned person during leave</label>
-                      <input class="w-full border border-gray-300 px-3 py-2 rounded" type="text" id="assignedPerson" name="assignedPerson" >
+                      <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Assigned person during leave</label>
+                      <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" type="text" id="assignedPerson" name="assignedPerson" >
                     </div>
 
                     <div class=" mb-4">
-                      <label class="block mb-2 items-center" for="leaveFromDate">Joining Date</label>
-                      <input class="w-full border border-gray-300 px-3 py-2 rounded" type="date" id="joiningDate" name="joiningDate" required>
+                      <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="leaveFromDate">Joining Date</label>
+                      <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" type="date" id="joiningDate" name="joiningDate" required>
                     </div>
                 </div>
           </div>

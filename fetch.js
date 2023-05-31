@@ -1,5 +1,7 @@
 const idNumberInput = document.getElementById('idNumber');
 idNumberInput.addEventListener('input', autofillInformation);
+const reasonInput = document.getElementById('reason');
+reasonInput.disabled=true;
 
 // if (idNumber.length !== 5) {
 //     firstNameInput.value = '';
@@ -11,6 +13,7 @@ idNumberInput.addEventListener('input', autofillInformation);
 
 
 function autofillInformation() {
+
     
     const idNumberInput = document.getElementById('idNumber');
     const idNumber = idNumberInput.value.trim();
@@ -53,45 +56,45 @@ function autofillInformation() {
     }
 
     function toggleReasonMenu() {
-        // const casualLeaveRadio = document.querySelector('input[value="Casual"]');
-        // const sickLeaveRadio=document.querySelector('input[value="Sick"]');
-        // const reasonInput = document.getElementById('reason');
-        // reasonInput.value='';
-        // reasonInput.disabled = true;
-        // if(!sickLeaveRadio.checked && !casualLeaveRadio.checked){
-        //     reasonInput.disabled=true;
-        //     reasonInput.inputMode.valie='';
-        // }
+        const casualLeaveRadio = document.querySelector('input[value="Casual"]');
+        const sickLeaveRadio=document.querySelector('input[value="Sick"]');
+        const reasonInput = document.getElementById('reason');
+        reasonInput.value='';
+        reasonInput.disabled = true;
+        if(!sickLeaveRadio.checked && !casualLeaveRadio.checked){
+            reasonInput.disabled=true;
+            reasonInput.inputMode.vale='';
+        }
         
   
-        // // Enable/disable the reason menu based on the selected leave type
-        // if (casualLeaveRadio.checked) {
-        //   reasonInput.disabled = false;
-        // } else {
-        //   reasonInput.disabled = true;
-        //   reasonInput.value = ''; // Clear the reason input when disabled
-        // }
+        // Enable/disable the reason menu based on the selected leave type
+        if (casualLeaveRadio.checked) {
+          reasonInput.disabled = false;
+        } else {
+          reasonInput.disabled = true;
+          reasonInput.value = ''; // Clear the reason input when disabled
+        }
 
         
-            const reasonContainer = document.getElementById('reasonContainer');
-            const sickLeaveRadio = document.querySelector('input[value="Sick"]');
-            const casualLeaveRadio = document.querySelector('input[value="Casual"]');
-            const reason = document.getElementById('reason');
-            if (!casualLeaveRadio.checked && !sickLeaveRadio.checked) {
-                reasonContainer.style.display = 'none';
-            }
-            if (casualLeaveRadio.checked) {
-                reasonContainer.style.display = 'block';
-              } else {
-                reasonContainer.style.display = 'none';
-              }
-            // Show/hide the reason menu based on the selected leave type
-            if (sickLeaveRadio.checked) {
-              // reasonContainer.style.display = 'none';
-              // reason.value='';
+            // const reasonContainer = document.getElementById('reasonContainer');
+            // const sickLeaveRadio = document.querySelector('input[value="Sick"]');
+            // const casualLeaveRadio = document.querySelector('input[value="Casual"]');
+            // const reason = document.getElementById('reason');
+            // if (!casualLeaveRadio.checked && !sickLeaveRadio.checked) {
+            //     reasonContainer.style.display = 'none';
+            // }
+            // if (casualLeaveRadio.checked) {
+            //     reasonContainer.style.display = 'block';
+            //   } else {
+            //     reasonContainer.style.display = 'none';
+            //   }
+            // // Show/hide the reason menu based on the selected leave type
+            // if (sickLeaveRadio.checked) {
+            //   // reasonContainer.style.display = 'none';
+            //   // reason.value='';
 
-            } else {
-              reasonContainer.style.display = 'block';
-            }
+            // } else {
+            //   reasonContainer.style.display = 'block';
+            // }
             
       }
